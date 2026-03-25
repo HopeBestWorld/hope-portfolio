@@ -14,5 +14,5 @@
 - Github
 
 ## Contact
-- LinkedIn: linkedin.com/in/hope-best/
+- LinkedIn: [linkedin.com/in/hope-best/](linkedin.com/in/hope-best/)
 - Email: hmb95@cornell.edu
