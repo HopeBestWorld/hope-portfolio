@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Best - Engineering Portfolio</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent-blue: #2563eb;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent-blue);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* Layout & Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--text-main);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        header h1 {
+            color: white;
+            font-size: 3rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p.title {
+            color: #94a3b8;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            font-size: 1.1rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--accent-blue);
+            color: white;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--accent-blue);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #cbd5e1;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        button.submit-btn {
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button.submit-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--text-main);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Hope Best</h1>
+            <p class="title">Computer Science & Information Science | Software Engineer</p>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I am a software engineer and student at Cornell University, pursuing a B.S. in Computer Science and an M.P.S. in Information Science. I am passionate about building robust software architecture and contributing to meaningful technical research.</p>
+            <p>With experience ranging from enterprise software engineering at UnitedHealth Group to leading technical development on academic research packages, I thrive in environments that require analytical problem-solving and clean, efficient code.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="container" style="background-color: white; padding: 3rem; border-radius: 8px; border: 1px solid var(--border-color);">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">MATLAB</div>
+            <div class="skill-tag">CAD</div>
+            <div class="skill-tag">Docker</div>
+            <div class="skill-tag">Bash</div>
+            <div class="skill-tag">Git/Version Control</div>
+            <div class="skill-tag">Software Architecture</div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Engineering Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/eeeeee/475569?text=Research+Package" alt="Project Image" class="project-img">
+                <div class="project-info">
+                    <h3>Matched Eigenfunctions Research Package</h3>
+                    <p>Served as the lead for the Python package development and lead author for the accompanying JOSS paper. Engineered robust computational tools for complex mathematical modeling alongside a multi-disciplinary research team.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/eeeeee/475569?text=Hydro+Project" alt="Project Image" class="project-img">
+                <div class="project-info">
+                    <h3>Semi-Analytical Hydro Project</h3>
+                    <p>Developed analytical and computational models to solve hydrodynamics problems. Focused on optimizing algorithms for faster data processing and accurate simulation outputs.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/eeeeee/475569?text=Game+Dev" alt="Project Image" class="project-img">
+                <div class="project-info">
+                    <h3>Python Game Development</h3>
+                    <p>Designed and programmed a standalone game development package utilizing object-oriented programming principles in Python to manage game states, physics, and rendering loops.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Hope Best. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
