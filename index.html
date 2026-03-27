@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,9 @@
         }
 
         /* Typography */
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 700;
             color: var(--text-main);
             margin-bottom: 1rem;
@@ -170,7 +173,7 @@
             font-weight: 600;
         }
 
-        .form-group input, 
+        .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 0.75rem;
@@ -179,7 +182,7 @@
             font-family: inherit;
         }
 
-        .form-group input:focus, 
+        .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-blue);
@@ -212,6 +215,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -224,49 +228,61 @@
     <section id="about" class="container">
         <h2>About Me</h2>
         <div class="about-content">
-            <p>I am a software engineer and student at Cornell University, pursuing a B.S. in Computer Science and an M.P.S. in Information Science. I am passionate about building robust software architecture and contributing to meaningful technical research.</p>
-            <p>With experience ranging from enterprise software engineering at UnitedHealth Group to leading technical development on academic research packages, I thrive in environments that require analytical problem-solving and clean, efficient code.</p>
+            <p>I am a software engineer and student at Cornell University, pursuing a B.S. in Computer Science. I am
+                passionate about building robust software architecture and
+                contributing to meaningful technical research.</p>
+            <p>With experience ranging from enterprise software engineering at UnitedHealth Group to leading technical
+                development on academic research packages, I thrive in environments that require analytical
+                problem-solving and clean, efficient code.</p>
         </div>
     </section>
 
-    <section id="skills" class="container" style="background-color: white; padding: 3rem; border-radius: 8px; border: 1px solid var(--border-color);">
+    <section id="skills" class="container"
+        style="background-color: white; padding: 3rem; border-radius: 8px; border: 1px solid var(--border-color);">
         <h2>Technical Skills</h2>
         <div class="skills-grid">
-            <div class="skill-tag">Python</div>
-            <div class="skill-tag">MATLAB</div>
-            <div class="skill-tag">CAD</div>
-            <div class="skill-tag">Docker</div>
-            <div class="skill-tag">Bash</div>
-            <div class="skill-tag">Git/Version Control</div>
-            <div class="skill-tag">Software Architecture</div>
+            <div class="skill-tag">Python (NumPy/SciPy/pandas)</div>
+            <div class="skill-tag">React & TypeScript</div>
+            <div class="skill-tag">C++ & Java</div>
+            <div class="skill-tag">AWS (S3/DynamoDB)</div>
+            <div class="skill-tag">Docker & Kubernetes</div>
+            <div class="skill-tag">Git & CI/CD</div>
+            <div class="skill-tag">RAG Pipelines</div>
         </div>
     </section>
 
     <section id="projects" class="container">
         <h2>Engineering Projects</h2>
         <div class="projects-grid">
-            
+
             <div class="project-card">
-                <img src="https://placehold.co/600x400/eeeeee/475569?text=Research+Package" alt="Project Image" class="project-img">
+                <img src="https://placehold.co/600x400/eeeeee/475569?text=Research+Package"
+                    alt="Matched Eigenfunctions Project" class="project-img">
                 <div class="project-info">
-                    <h3>Matched Eigenfunctions Research Package</h3>
-                    <p>Served as the lead for the Python package development and lead author for the accompanying JOSS paper. Engineered robust computational tools for complex mathematical modeling alongside a multi-disciplinary research team.</p>
+                    <h3>Matched Eigenfunctions Research</h3>
+                    <p>Served as the lead for the Python package development and lead author for the accompanying JOSS
+                        paper. Automated CI/CD via GitHub Actions and engineered computational tools for complex
+                        mathematical modeling.</p>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="https://placehold.co/600x400/eeeeee/475569?text=Hydro+Project" alt="Project Image" class="project-img">
+                <img src="https://placehold.co/600x400/eeeeee/475569?text=RAG+System" alt="RAG System Project"
+                    class="project-img">
                 <div class="project-info">
-                    <h3>Semi-Analytical Hydro Project</h3>
-                    <p>Developed analytical and computational models to solve hydrodynamics problems. Focused on optimizing algorithms for faster data processing and accurate simulation outputs.</p>
+                    <h3>Retrieval-Augmented Generation System</h3>
+                    <p>Engineered a FAISS/IVFFlat pipeline achieving 204x throughput. Optimized Qwen2 and TinyLlama
+                        models alongside Top-K retrieval to build a highly efficient LLM architecture.</p>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="https://placehold.co/600x400/eeeeee/475569?text=Game+Dev" alt="Project Image" class="project-img">
+                <img src="https://placehold.co/600x400/eeeeee/475569?text=Financial+Dashboard" alt="DeepSpace Dashboard"
+                    class="project-img">
                 <div class="project-info">
-                    <h3>Python Game Development</h3>
-                    <p>Designed and programmed a standalone game development package utilizing object-oriented programming principles in Python to manage game states, physics, and rendering loops.</p>
+                    <h3>DeepSpace Financial Dashboard</h3>
+                    <p>Developed a React-based web dashboard integrating TradingView APIs and a custom Python NLP
+                        algorithm to simulate and visualize automated trade executions.</p>
                 </div>
             </div>
 
@@ -301,4 +317,5 @@
     </footer>
 
 </body>
+
 </html>
